@@ -22,6 +22,9 @@ export default class Operacao extends React.Component {
       >
         <Picker.Item label='Soma' value='soma' />
         <Picker.Item label='Subtração' value='subtracao' />
+        <Picker.Item label='Multiplicação' value='multiplicacao' />
+        <Picker.Item label='Divisão' value='divisao' />
+
       </Picker>
     );
   }

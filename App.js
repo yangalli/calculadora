@@ -24,6 +24,12 @@ export default class App extends React.Component {
       case 'subtracao':
         resultado = parseFloat(this.state.num1) - parseFloat(this.state.num2);
         break;
+      case 'multiplicacao':
+        resultado = parseFloat(this.state.num1) * parseFloat(this.state.num2);
+        break;
+      case 'divisao':
+        resultado = parseFloat(this.state.num1) / parseFloat(this.state.num2);
+        break;
       default:
         resultado = 0;
     }
