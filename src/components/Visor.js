@@ -13,9 +13,20 @@ const Estilos = {
 
 const { textoVisor } = Estilos;
 
-export default props => (
-  <View>
-    <StatusBar hidden={true} />
-    <TextInput style={textoVisor} placeholder='Resultado' />
-  </View>
-);
+export default class Visor extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = { resultado: '' };
+  }
+
+  render() {
+    return(
+      <View>
+        <StatusBar hidden={true} />
+        <TextInput style={textoVisor} placeholder='Resultado' value={this.state.resultado} editable={false} />
+      </View>
+    );
+  }
+}

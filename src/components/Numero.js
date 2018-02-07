@@ -13,5 +13,9 @@ const Estilos = {
 const { numero } = Estilos;
 
 export default props => (
-  <TextInput style={numero}></TextInput>
+  <TextInput 
+  style={numero} 
+  value={props.num} 
+  onChangeText={ valorDoCampo => props.atualizaValor(props.nome, valorDoCampo) } 
+  />
 );

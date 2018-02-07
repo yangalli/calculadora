@@ -12,9 +12,17 @@ const Estilos = {
 
 const { operacao } = Estilos;
 
-export default props => (
-  <Picker style={operacao}>
-    <Picker.Item label='Soma' value='soma' />
-    <Picker.Item label='Subtração' value='subtracao' />
-  </Picker>
-);
+export default class Operacao extends React.Component {
+  
+  render() {
+    return (
+      <Picker style={operacao} 
+      selectedValue={this.props.operacao} 
+      onValueChange={op => { this.props.atualizaOperacao(op);}} 
+      >
+        <Picker.Item label='Soma' value='soma' />
+        <Picker.Item label='Subtração' value='subtracao' />
+      </Picker>
+    );
+  }
+}
